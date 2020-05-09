@@ -11,4 +11,7 @@ dump(secondDF,file=".\\java2.txt")
 secondDF_new<-dget(".\\java.txt")
 print(secondDF_new)
 # using connection 
-url(description = "It is google ",open="https://google.com")
+google_page<-url(description = "https://google.com",open="r")
+google_page_data<-readLines(google_page)
+head(google_page_data)
+close(google_page)
